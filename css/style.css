@@ -102,7 +102,7 @@ body {
     animation-iteration-count: infinite;
 }
 .d-1-4 {
-    flex 1;
+    flex: 1;
     line-height: 30px;
 }
 .d-1-right {
