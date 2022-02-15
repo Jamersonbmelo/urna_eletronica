@@ -4,17 +4,17 @@ let etapas = [
         numeros: 5,
         candidatos: [
             {
-                numero: 45555,
-                nome: 'Jamerson Melo',
-                partido: 'PSDB',
+                numero: '38111',
+                nome: 'Fulano de Tal',
+                partido: 'ABC',
                 fotos: [
                     { url: 'jamerson.jpg', legenda: 'Vereador', }
                 ]
             },
             {
-                numero: 22123,
-                nome: 'Victor Hugo',
-                partido: 'PL',
+                numero: '77222',
+                nome: 'Beltrano da Silva',
+                partido: 'DEFG',
                 fotos: [
                     { url: 'victorhugo.jpg', legenda: 'Vereador', }
                 ]
@@ -26,7 +26,7 @@ let etapas = [
         numeros: 2,
         candidatos: [
             {
-                numero: 45,
+                numero: '45',
                 name: 'Silvio Mendes',
                 partido: 'PSDB',
                 vice: 'Iracema Portella',
@@ -36,7 +36,7 @@ let etapas = [
                 ]
             },
             {
-                numero: 13,
+                numero: '13',
                 name: 'Rafael Fonteles',
                 partido: 'PP',
                 vice: 'Júlio Cesar',
