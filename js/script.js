@@ -7,11 +7,14 @@ let numeros = document.querySelector('.d-1-3');
 
 let etapaAtual = 0;
 let numero = '';
+let votoBranco = false;
 
 function comecarEtapa() {
     let etapa = etapas[etapaAtual];
 
     let numeroHtml = '';
+    numero = '';
+    votoBranco = false;
 
     for (let i = 0; i < etapa.numeros; i++) {
         if (i === 0) {
@@ -37,10 +40,23 @@ function atualizaInterface() {
             return false;
         }
     });
+    if (candidato.length > 0) {
+        candidato = candidato[0];
+        seuVotoPara.style.display = 'block';
+        aviso.style.display = 'block';
+        descricao.innerHTML = `nome: ${candidato.nome}<br/>Partido: ${candidato.partido}`;
 
-    console.log('Candidato', candidato);
+        let fotosHtml = '';
+        for (let i in candidato.fotos) {
+            fotosHtml += `<div class="d-1-image"><img src="images/${candidato.fotos[i].url}" alt="" />${candidato.fotos[i].legenda}</div>`;
+        }
+        lateral.innerHTML = fotosHtml;
+    } else {
+
+        aviso.style.display = 'block';
+        descricao.innerHTML = '<div class="aviso--grande pisca">VOTO NULO</div>';
+    }
 }
-
 function clicou(n) {
     let elNumero = document.querySelector('.numero.pisca');
     if (elNumero !== null) {
@@ -53,16 +69,22 @@ function clicou(n) {
         } else {
             atualizaInterface();
         }
-
     }
-}
-function branco() {
-    alert("Clicou em BRANCO!");
-}
-function corrige() {
-    alert("Clicou em CORRIGE!");
-}
-function confirma() {
-    alert("Clicou em CONFIRMA!");
-}
-comecarEtapa();
+
+    function branco() {
+        if (numero === '') {
+            votoBranco = true;
+            
+            seuVotoPara.style.display = 'block';
+            aviso.style.display = 'block';
+            numeros.innerHTML = '';
+            descricao.innerHTML = '<div class="aviso--grande pisca">VOTO EM BRANCO</div>';
+            lateral.innerHTML = '';
+    }
+    function corrige() {
+        comecarEtapa();
+    }
+    function confirma() {
+        alert("Clicou em CONFIRMA!");
+    }
+    comecarEtapa();
