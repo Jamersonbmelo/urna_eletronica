@@ -4,19 +4,19 @@ let etapas = [
         numeros: 5,
         candidatos: [
             {
-                numero: '38111',
-                nome: 'Fulano de Tal',
-                partido: 'ABC',
+                numero: '45111',
+                nome: 'Jamerson Bezerra de Melo',
+                partido: 'PSDB',
                 fotos: [
-                    { url: 'jamerson.jpg', legenda: 'Vereador', }
+                    { url: 'jamerson.jpg', legenda: 'Vereador' }
                 ]
             },
             {
-                numero: '77222',
-                nome: 'Beltrano da Silva',
-                partido: 'DEFG',
+                numero: '22111',
+                nome: 'Victor Hugo da Silva Cruz',
+                partido: 'PL',
                 fotos: [
-                    { url: 'victorhugo.jpg', legenda: 'Vereador', }
+                    { url: 'victorhugo.jpg', legenda: 'Vereador' }
                 ]
             },
         ]
@@ -27,18 +27,18 @@ let etapas = [
         candidatos: [
             {
                 numero: '45',
-                name: 'Silvio Mendes',
+                nome: 'Silvio Mendes',
                 partido: 'PSDB',
                 vice: 'Iracema Portella',
                 fotos: [
                     { url: 'silvio.jpg', legenda: 'Prefeito' },
-                    { url: 'iracema.jpg', legenda: 'Vice-Prefeito', small: true }
+                    { url: 'irecema.jpg', legenda: 'Vice-Prefeito', small: true }
                 ]
             },
             {
                 numero: '13',
-                name: 'Rafael Fonteles',
-                partido: 'PP',
+                nome: 'Rafael Fonteles',
+                partido: 'PT',
                 vice: 'Júlio Cesar',
                 fotos: [
                     { url: 'rafaelfonteles.jpg', legenda: 'Prefeito' },
